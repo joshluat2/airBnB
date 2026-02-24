@@ -1,0 +1,124 @@
+﻿body {
+}
+
+.containerbox1 {
+    align-content: start;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 90%;
+    margin: 5%;
+}
+
+.texttitle {
+    color: darkgoldenrod;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+
+
+.textbox1 {
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px black;
+    text-align: center;
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
+    width: 75%;
+    padding: 2%;
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.imgbox1 {
+    align-content: normal;
+    color: black;
+    width: 100%;
+    padding: 2%;
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+    .imgbox1 img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 8px black;
+    }
+
+.imgback3 {
+    height: auto;
+    width: 100%;
+    background-image: url(../images/couple.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0%;
+}
+
+section {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .containerbox1 {
+        padding: 2%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 62% 18%;
+        grid-row-gap: normal;
+    }
+
+    .texttitle {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+    }
+
+
+
+    .textbox1 {
+        background-color: white;
+        border: 2px solid black;
+        box-shadow: 0 4px 8px black;
+        text-align: center;
+        font-family: 'Playfair Display', sans-serif;
+        color: black;
+        width: 75%;
+        padding: 2%;
+        position: relative;
+        grid-column: 1;
+        grid-row: 2;
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .imgbox1 {
+        align-content: normal;
+        color: black;
+        width: 100%;
+        padding: 2%;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+        .imgbox1 img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px black;
+        }
+}
