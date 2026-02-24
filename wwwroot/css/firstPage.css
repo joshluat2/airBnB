@@ -53,26 +53,15 @@ h2 {
 }
 
 a {
-    border-color: aquamarine;
-    background-color: black;
     color: ghostwhite;
-    font-family: 'Playfair Display', sans-serif;
-    padding: 2rem 2rem;
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4% 2%;
-    cursor: pointer;
-    font-size: large;
 }
 
 a:hover {
+    color: darkred;
     text-decoration: underline;
-    color: black;
-    background-color: whitesmoke
+    text-decoration:solid;
 }
+
 
 ul {
     position: fixed;
