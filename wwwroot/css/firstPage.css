@@ -52,7 +52,11 @@ h2 {
     margin-left: auto;
 }
 
-a {
+a:link {
+    color: ghostwhite;
+}
+
+a:visited {
     color: ghostwhite;
 }
 
