@@ -19,6 +19,9 @@ namespace airBnB.Pages
             _context = context;
         }
 
+        [BindProperty]
+        public string Search { get; set; }
+
         public IList<RoomBooking> RoomBooking { get; set; } = default!;
 
         public void OnGet()
