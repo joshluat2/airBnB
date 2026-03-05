@@ -264,4 +264,6 @@ hr.dashedbottom {
     align-items: center;
     gap: 5rem;
     padding: 5%;
+    background-color: ghostwhite;
+    color:black;
 }
