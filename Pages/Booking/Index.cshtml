@@ -1,0 +1,60 @@
+﻿@page
+@model airBnB.Pages.Booking.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomBooking[0].room_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomBooking[0].room_desc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomBooking[0].price_per_night)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomBooking[0].image_desc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomBooking[0].image_data)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.RoomBooking) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.room_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.room_desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price_per_night)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image_desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image_data)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

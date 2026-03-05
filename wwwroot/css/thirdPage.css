@@ -1,0 +1,135 @@
+﻿body {
+}
+
+.containerbox11 {
+    align-content: start;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 90%;
+    margin: 5%;
+}
+
+.lil {
+    border-radius: 25%;
+    width: 100%;
+}
+
+.rdiv {
+    width: 85%;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-content: center;
+}
+
+form {
+    z-index: 20;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    width: 85%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+input[type=text] {
+    font-family: 'Libre Baskerville', Arial, serif;
+    background-color: ghostwhite;
+    border-width: 0px;
+    width: 100%;
+    height: 25%;
+    border: 5px solid black;
+}
+
+input[type=date] {
+    font-family: 'Libre Baskerville', Arial, serif;
+    background-color: ghostwhite;
+    border-width: 0px;
+    width: 100%;
+    height: 25%;
+    border: 5px solid black;
+}
+
+.asks {
+    display: block;
+    display: inline-block;
+    font-family: 'Libre Baskerville', Arial, serif;
+    background-color: ghostwhite;
+    border-width: 0px;
+    border: 5px solid black;
+    line-height: 120%;
+}
+
+input[type=submit] {
+    font-family: 'Libre Baskerville', Arial, serif;
+    background-color: ghostwhite;
+    border-width: 0px;
+    border: 5px solid black;
+    width: 100%;
+    height: 25%;
+}
+
+label {
+    color: ghostwhite;
+    font-family: 'Libre Baskerville', Arial, serif;
+}
+
+.textforcon {
+    left: 20%;
+    margin: 5%;
+    background-color: ghostwhite;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px black;
+    text-align: center;
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
+    width: 45%;
+    height: 1%;
+    padding: 2%;
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    height: fit-content;
+    overflow: hidden;
+}
+
+@media(max-width: 600px) {
+    .containerbox11 {
+        align-content: center;
+        padding: 2%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        margin: 5%;
+    }
+
+    .rdiv {
+        width: 85%;
+        grid-column: 1;
+        grid-row: 1;
+        align-content: center;
+    }
+
+    .lil {
+        border-radius: 25%;
+        width: 100%;
+    }
+
+    form {
+        z-index: 20;
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        width: 85%;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 2;
+    }
+}

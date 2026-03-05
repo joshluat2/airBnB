@@ -7,7 +7,28 @@
 
 
 <div class="text-center">
-    <h1 class="display-4">welcome guys</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>1ST</th>
+                <th>2ND</th>
+                <th>3RD</th>
+                <th>4th</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tblRoomBookings in Model.RoomBooking)
+            {
+                <tr>
+                    <td>tblRoombookings.Id</td>
+                    <td>tblRoombookings.room_name</td>
+                    <td>tblRoombookings.room_desc</td>
+                    <td>tblRoombookings.price_per_night</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
  </div>
 
 <h1>landfall wonderland air b&b</h1>
@@ -24,7 +45,7 @@
         <div class="contaierdiv ">
             <div class="gallerydivparent">
                 <div class="gallerydiv">
-                    <img src="images/kitchen.png" alt="An image of a kitchen with an oven, fridge and window overlooking a frozen river">
+                    <img src="../images/kitchen.png" alt="An image of a kitchen with an oven, fridge and window overlooking a frozen river">
 
                 </div>
 
@@ -35,7 +56,7 @@
 
             <div class="gallerydivparent">
                 <div class="gallerydiv">
-                    <img src="images/bedroom.png" alt="An image of a bedroom with a double bed, a T.V. a night stand and a window over looking the same lake">
+                    <img src="../images/bedroom.png" alt="An image of a bedroom with a double bed, a T.V. a night stand and a window over looking the same lake">
 
                 </div>
                 <div class="textdiv">
@@ -45,7 +66,7 @@
 
             <div class="gallerydivparent">
                 <div class="gallerydiv">
-                    <img src="images/livingroom.png" alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
+                    <img src="../images/livingroom.png" alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
 
                 </div>
                 <div class="textdiv">
@@ -60,6 +81,6 @@
     <div class="bottomdiv">
         <hr class="dashed" />
 
-        <img src="images/bottom_banner.png" alt="the main lobby of the air b&b">
+        <img src="../images/bottom_banner.png" alt="the main lobby of the air b&b">
     </div>
 </div>
