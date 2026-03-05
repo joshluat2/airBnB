@@ -3,35 +3,40 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<link rel="stylesheet" href="~/css/firstPage.css" />
+
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/firstPage.css" />
+
+</head>
+<body>
 
 <div class="imgback">
-
-
-<div class="text-center">
-    <table>
-        <thead>
-            <tr>
-                <th>1ST</th>
-                <th>2ND</th>
-                <th>3RD</th>
-                <th>4th</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var tblRoomBookings in Model.RoomBooking)
-            {
+    <div class="flexcontainer">
+        <table>
+            <thead>
                 <tr>
-                    <td>tblRoombookings.Id</td>
-                    <td>tblRoombookings.room_name</td>
-                    <td>tblRoombookings.room_desc</td>
-                    <td>tblRoombookings.price_per_night</td>
-
+                    <th>1ST</th>
+                    <th>2ND</th>
+                    <th>3RD</th>
+                    <th>4th</th>
                 </tr>
-            }
-        </tbody>
-    </table>
- </div>
+            </thead>
+            <tbody>
+                @foreach (var tblRoomBookings in Model.RoomBooking)
+                {
+                    <tr>
+                        <td>tblRoombookings.Id</td>
+                        <td>tblRoombookings.room_name</td>
+                        <td>tblRoombookings.room_desc</td>
+                        <td>tblRoombookings.price_per_night</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
 
 <h1>landfall wonderland air b&b</h1>
@@ -88,3 +93,7 @@
     </div>
     <script src="root/JavaScript1.js"></script>
 </div>
+</body>
+</html>
+
+
