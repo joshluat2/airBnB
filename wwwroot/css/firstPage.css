@@ -257,6 +257,8 @@ hr.dashedbottom {
 }
 
 .flexcontainer {
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
