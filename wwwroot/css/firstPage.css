@@ -230,6 +230,7 @@ ul {
 .bottomdiv {
     width: 100%;
     height: 25%;
+    
 }
 
     .bottomdiv img {
@@ -237,6 +238,8 @@ ul {
         height: 25%;
         position: absolute;
     }
+
+
 
 
 
