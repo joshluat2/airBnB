@@ -20,7 +20,7 @@ namespace airBnB.Pages
         }
 
         [BindProperty]
-        public string Search { get; set; }
+        public string search { get; set; }
 
         public IList<RoomBooking> RoomBooking { get; set; } = default!;
 
