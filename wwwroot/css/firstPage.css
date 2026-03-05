@@ -11,12 +11,14 @@ body {
 .imgback {
     height: auto;
     width: 100%;
-    background-image: url(../images/forestView.png);
+    background-image: url(images/forestView.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0%;
 }
+         
+
 
 .imgback2 {
     height: auto;
@@ -96,10 +98,10 @@ ul {
     }
 
         ul li img {
-            width: 65%;
+            width: 45%;
             padding: 0%;
             margin: 0%;
-            bottom: 5%;
+            bottom: 25%;
         }
 
 
@@ -226,15 +228,25 @@ ul {
 }
 
 .bottomdiv {
-    width: 100%;
-    height: 25%;
+    height: 5%;
+    width:auto;
 }
 
     .bottomdiv img {
-        width: 100%;
-        height: 25%;
-        position: absolute;
+        width: 50%;
+        height: auto;
+       
     }
+
+footer {
+    height: auto;
+    width: 100%;
+    background-image: url(images/forestView.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0%;
+}
 
 
 
