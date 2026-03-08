@@ -1,12 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using airBnB.Data;
+using airBnB;
+using Microsoft.AspNetCore.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<airBnBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("airBnBContext") ?? throw new InvalidOperationException("Connection string 'airBnBContext' not found.")));
+
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -25,9 +29,20 @@ using (var scope = app.Services.CreateScope())
 
 {
     var services = scope.ServiceProvider;
-    var context = services.GetRequiredService <airBnBContext>(); context.Database.EnsureCreated();
-    //DbInitializer.Initialize(context);
+    var logger = services.GetRequiredService<ILogger<Program>>();
 
+    try
+    {
+        var context = services.GetRequiredService<airBnBContext>(); context.Database.EnsureCreated();
+        //DbInitializer.Initialize(context);
+    }
+
+    catch (Exception ex)
+    {
+        // Log details and fail fast or continue depending on your policy.
+        logger.LogError(ex, "Database initialization failed. Check network, server, and credentials.");
+throw;
+    }
 }
 
 
