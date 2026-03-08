@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using airBnB.Data;
 using airBnB.models;
+using System.IO;
 
 namespace airBnB.Pages.Booking
 {
@@ -33,6 +34,18 @@ namespace airBnB.Pages.Booking
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            foreach (var file in Request.Form.Files)
+            { 
+            MemoryStream ms = new MemoryStream();
+                { 
+                file.CopyTo(ms);
+                RoomBooking.image_data = ms.ToArray();
+                }
+
+                ms.Close();
+                ms.Dispose();
             }
 
             _context.RoomBookings.Add(RoomBooking);
