@@ -28,7 +28,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.RoomBooking[0].image_data)
             </th>
-            <th></th>
+            <th>
+				@Html.DisplayNameFor(model => model.RoomBooking[0].image_data)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -46,9 +48,20 @@
             <td>
                 @Html.DisplayFor(modelItem => item.image_desc)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.image_data)
-            </td>
+                @{
+                    try
+                    {
+                        <td>
+                            <img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(item.image_data))" alt="@item.image_desc"/>
+                        </td>
+                    }
+                    catch
+                    {
+                    <td>
+							<img class="img-thumb" src="/images/no-image.png" alt="No image available" />
+                    </td>    
+                    }
+                }
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
