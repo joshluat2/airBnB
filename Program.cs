@@ -11,6 +11,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<airBnBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("airBnBContext") ?? throw new InvalidOperationException("Connection string 'airBnBContext' not found.")));
 
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<airBnBContext>();
+
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
