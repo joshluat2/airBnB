@@ -3,6 +3,8 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
+<link rel="stylesheet" href="~/css/loggingin.css" asp-append-version="true" />
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
