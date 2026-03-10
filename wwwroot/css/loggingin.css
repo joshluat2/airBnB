@@ -3,4 +3,10 @@
 
 ul {
     background-color: black;
+    height: 25%;
+
+}
+li {
+    color: white;
+    height: 100%;
 }
