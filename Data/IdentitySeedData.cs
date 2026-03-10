@@ -24,12 +24,12 @@ namespace airBnB.Data
                 await roleManager.CreateAsync(new IdentityRole(memberRole));
             }
 
-            if (await userManager.FindByNameAsync("admin@ucm.ac.im") == null)
+            if (await userManager.FindByNameAsync("admin@ucm.ac.imj") == null)
             {
                 var user = new IdentityUser
                 {
-                    UserName = "admin@ucm.ac.im",
-                    Email = "admin@ucm.ac.im",
+                    UserName = "admin@ucm.ac.imj",
+                    Email = "admin@ucm.ac.imj",
                     PhoneNumber = "06124 648200"
                 };
                 var result = await userManager.CreateAsync(user);
