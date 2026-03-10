@@ -2,7 +2,11 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+	var inMemberRole = User.IsInRole("Member");
+	var inAdminRole = User.IsInRole("Admin");
 }
+
+
 
 <html lang="en">
 <head>
@@ -17,6 +21,10 @@
 
 
 <h1>landfall wonderland air b&b</h1>
+
+
+<p>Is admin: @inAdminRole</p>
+<p>Is member: @inMemberRole</p>
 
 
 <div class="randomimgdiv">

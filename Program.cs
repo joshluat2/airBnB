@@ -11,8 +11,17 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<airBnBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("airBnBContext") ?? throw new InvalidOperationException("Connection string 'airBnBContext' not found.")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<airBnBContext>();
+//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<airBnBContext>();
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+    options =>
+    {
+        options.Stores.MaxLengthForKeys = 128;
+    })
+.AddEntityFrameworkStores<airBnBContext>()
+.AddRoles<IdentityRole>()
+.AddDefaultUI()
+.AddDefaultTokenProviders();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -58,4 +67,13 @@ app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
 
-app.Run();
+using (var scope = app.Services.CreateScope()) {
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<airBnBContext>();
+    context.Database.Migrate();
+    var userMgr = services.GetRequiredService<UserManager<IdentityUser>>();
+    var roleMgr = services.GetRequiredService<RoleManager<IdentityRole>>();
+    IdentitySeedData.Initialize(context, userMgr, roleMgr).Wait();
+}
+
+    app.Run();
