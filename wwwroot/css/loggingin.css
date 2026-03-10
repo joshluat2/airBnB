@@ -2,11 +2,15 @@
 }
 
 ul {
-    background-color: black;
+    background-color: white;
     height: 25%;
-
+    color: white;
 }
-li {
+ul li {
     color: white;
     height: 100%;
+}
+form {
+
+    color: white;
 }

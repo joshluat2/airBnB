@@ -25,6 +25,17 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Requires admin", policy => policy.RequireRole("Admin"));
+});
+
+builder.Services.AddRazorPages()
+    .AddRazorPagesOptions(options =>
+    {
+        options.Conventions.AuthorizeFolder("/Booking", "Requires admin");
+    });
+
 var app = builder.Build();
 
 
