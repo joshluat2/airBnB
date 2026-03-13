@@ -28,5 +28,10 @@ namespace airBnB.Pages
         {
             RoomBooking = _context.RoomBookings.FromSqlRaw("SELECT * FROM RoomBookings").ToList();
         }
+
+        public IActionResult OnPostSearch() {
+            RoomBooking = _context.RoomBookings.FromSqlRaw("SELECT * FROM RoomBookings WHERE room_name LIKE '" + search + "%'").ToList();
+            return Page();
+        }
     }
 }

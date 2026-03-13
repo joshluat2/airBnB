@@ -8,4 +8,9 @@
         background-color: #89CFF0;
         color: ghostwhite;
         font-weight: bold;
+        padding: 15px 12px;
+    }
+    .contenttable td {
+        padding: 15px 12px;
+        border-bottom: 2px solid gray;
     }
