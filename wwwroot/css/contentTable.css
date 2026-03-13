@@ -1,0 +1,11 @@
+﻿.contenttable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+    .contenttable th {
+        background-color: #89CFF0;
+        color: ghostwhite;
+        font-weight: bold;
+    }
