@@ -133,3 +133,7 @@ label {
         grid-row: 2;
     }
 }
+
+.hidden {
+    display: none;
+}
