@@ -43,6 +43,7 @@
                     <th>2ND</th>
                     <th>3RD</th>
                     <th>4th</th>
+                    <th>5th</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,6 +54,7 @@
                         <td>@tblRoomBookings.room_name</td>
                         <td>@tblRoomBookings.room_desc</td>
                         <td>@tblRoomBookings.price_per_night</td>
+                        <td><img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(tblRoomBookings.image_data))" /></td>
 
                     </tr>
                 }

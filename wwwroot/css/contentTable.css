@@ -14,3 +14,7 @@
         padding: 15px 12px;
         border-bottom: 2px solid gray;
     }
+
+        .contenttable td img {
+            width: 35%;
+        }

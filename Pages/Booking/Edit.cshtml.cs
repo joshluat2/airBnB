@@ -30,6 +30,7 @@ namespace airBnB.Pages.Booking
                 return NotFound();
             }
 
+
             var roombooking =  await _context.RoomBookings.FirstOrDefaultAsync(m => m.Id == id);
             if (roombooking == null)
             {
@@ -46,6 +47,18 @@ namespace airBnB.Pages.Booking
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            foreach (var file in Request.Form.Files)
+            {
+                MemoryStream ms = new MemoryStream();
+                {
+                    file.CopyTo(ms);
+                    RoomBooking.image_data = ms.ToArray();
+                }
+
+                ms.Close();
+                ms.Dispose();
             }
 
             _context.Attach(RoomBooking).State = EntityState.Modified;
