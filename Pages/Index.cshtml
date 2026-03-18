@@ -54,7 +54,7 @@
                         <td>@tblRoomBookings.room_name</td>
                         <td>@tblRoomBookings.room_desc</td>
                         <td>@tblRoomBookings.price_per_night</td>
-                        <td><img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(tblRoomBookings.image_data))" /></td>
+                        <td><img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(tblRoomBookings.image_data))" alt="Images from a database showing the kitchen, livingroom and bedroom, more can be seen below"/></td>
 
                     </tr>
                 }
@@ -65,6 +65,7 @@
         
     </div>
     <h2>search</h2>
+
     <form method="post">
         <div>search<input asp-for="search"></div>
         <button type="submit" asp-page-handler="search">submit</button>
