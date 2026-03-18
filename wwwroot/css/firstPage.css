@@ -1,7 +1,7 @@
 ﻿
 
 body {
-    padding-top: 15%;
+    padding-top: 20%;
     margin: 0;
     overflow-x: hidden;
     background-color: #89CFF0;
@@ -33,7 +33,7 @@ body {
 
 h1 {
     font-family: 'Playfair Display', sans-serif;
-    color: #333333;
+    color: ghostwhite;
     text-align: center;
 }
 
@@ -43,7 +43,7 @@ p {
 
 h2 {
     font-family: 'Playfair Display', sans-serif;
-    color: #333333;
+    color: ghostwhite;
     text-align: center;
 }
 
@@ -210,6 +210,8 @@ a:hover {
     height: fit-content;
     width: contain;
     overflow: hidden;
+    background-color: black;
+    border-radius: 5%;
 }
 
 
