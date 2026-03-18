@@ -13,6 +13,8 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/firstPage.css" />
     <link rel="stylesheet" href="~/css/contentTable.css" />
+    <link rel="stylesheet" href="~/css/rotatingImages.css" />
+
 
 
 </head>
@@ -24,10 +26,35 @@
 
 <h1>landfall wonderland air b&b</h1>
 
+        <div class="slideshow-container">
 
-<p>Is admin: @inAdminRole</p>
-<p>Is member: @inMemberRole</p>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src=@Url.Content("~/images/livingroom.png") alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
 
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src=@Url.Content("~/images/bedroom.png") alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src=@Url.Content("~/images/kitchen.png") alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
+                <div class="text">Caption Three</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
 
 
 </div>

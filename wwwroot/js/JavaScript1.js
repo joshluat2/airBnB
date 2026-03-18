@@ -1,7 +1,19 @@
-﻿let image = document.getElementById('image')
-let images = ['../images/hue1.jpg', '../images/hue2']
-setInterval(function(){
-	let random = Math.floor(Math.random() * 2)
-	image.src = images[random]	
-	}, 800)
-	//HTML, A. (2017). How To Automatically Change An HTML Image Using JavaScript. Stack Overflow. https://stackoverflow.com/questions/42003566/how-to-automatically-change-an-html-image-using-javascript
+﻿let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 6000); // Change image every 2 seconds
+}
