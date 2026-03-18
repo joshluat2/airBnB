@@ -1,6 +1,7 @@
 ﻿let slideIndex = 0;
 showSlides();
 
+//This is the javascript function for iterating throuhg a list of divs containted within the mySlides class, once it lands on that iteration it will allow the cntents to be displayed as a block, while the rest of the divs will be hidden. It also iterates through the dots class to change the active dot to match the current slide. The setTimeout function allows for the slides to change every 6 seconds.
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");

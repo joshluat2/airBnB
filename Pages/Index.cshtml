@@ -26,25 +26,23 @@
 
 <h1>landfall wonderland air b&b</h1>
 
+        <!-- this section of html is for my rotation of images, previously i had used my own code however while publishing to plesk it stopped working so i heavily followed w3schools for my entire image roatation senction only changing small bits, https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto -->
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
                 <img src=@Url.Content("~/images/livingroom.png") alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
 
-                <div class="text">Caption Text</div>
+                <div class="text">The living room</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
                 <img src=@Url.Content("~/images/bedroom.png") alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
-                <div class="text">Caption Two</div>
+                <div class="text">The bedroom</div>
             </div>
-
+            <!-- This all works by having a class which will not display the content and using the javascript each of these different sections ussing the myslides class will get added to a list which will be constly moved through and each value it lands on will have its display:none removed so we are able to see it as a block along with a fade animaiton-->
             <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
                 <img src=@Url.Content("~/images/kitchen.png") alt="An image of a living rooms with two sofas, a T.V. a window overlooking a waterfall and the northern lights">
-                <div class="text">Caption Three</div>
+                <div class="text">The kitchen</div>
             </div>
 
         </div>
@@ -61,6 +59,7 @@
     <hr class="dashedbottom" />
     <div class="flexcontainer">
         <hr class="dashed" />
+        <!-- this section will display the different contents of the roomBookings table within my database for viewing-->
         <table class="contenttable">
             <thead>
                 <tr>
@@ -79,6 +78,7 @@
                         <td>@tblRoomBookings.room_name</td>
                         <td>@tblRoomBookings.room_desc</td>
                         <td>@tblRoomBookings.price_per_night</td>
+                        <!-- converting raw image data from the database for use in the index page-->
                         <td><img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(tblRoomBookings.image_data))" alt="Images from a database showing the kitchen, livingroom and bedroom, more can be seen below"/></td>
 
                     </tr>
@@ -89,6 +89,8 @@
 
         
     </div>
+
+    <!--search bar to allow for users to access specific parts of the database-->
     <h2>search</h2>
 
     <form method="post">
@@ -98,6 +100,7 @@
 <hr class="dashedbottom" />
 <div class="imgback2">
     <hr class="dashed" />
+    <!--this section will dispaly text and images next to each other-->
     <div class="encapsulordiv">
         <h2> gallery</h2>
         <div class="contaierdiv ">
