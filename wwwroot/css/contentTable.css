@@ -19,4 +19,11 @@
             width: 35%;
         }
 
+@media (max-width: 600px) {
+    .contenttable td img {
+        width: 95%;
+    }
+
+}
+
 /*I used this section to format my table within the index page https://www.youtube.com/watch?v=biI9OFH6Nmg*/
